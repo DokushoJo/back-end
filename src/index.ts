@@ -16,9 +16,9 @@ const options: cors.CorsOptions = {
 };
 
 //app use
+app.use(cors(options))
 app.use(express.json());
 app.use(router);
-app.use(cors(options))
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
